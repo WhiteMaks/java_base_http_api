@@ -1,8 +1,8 @@
-package com.github.whitemaks.base.http.api.wrappers;
+package base.http.api.wrappers;
 
-import com.github.whitemaks.base.http.api.HttpApi;
-import com.github.whitemaks.base.http.api.RestResponse;
-import com.github.whitemaks.base.http.api.StatusCode;
+import base.http.api.HttpApi;
+import base.http.api.RestResponse;
+import base.http.api.StatusCode;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

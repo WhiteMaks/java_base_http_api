@@ -1,4 +1,4 @@
-package com.github.whitemaks.base.http.api;
+package base.http.api;
 
 import java.io.File;
 
