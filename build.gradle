@@ -1,12 +1,33 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'com.github.whitemaks'
-version = '1.0-SNAPSHOT'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            pom {
+                name = 'Java Base Http Api'
+                description = 'Java Base Http Api'
+                url = 'https://github.com/WhiteMaks/java_base_http_api'
+
+                scm {
+                    connection = 'scm:git:git://github.com/WhiteMaks/java_base_http_api.git'
+                    developerConnection = 'scm:git:ssh://github.com/WhiteMaks/java_base_http_api.git'
+                    url = 'https://github.com/WhiteMaks/java_base_http_api'
+                }
+            }
+        }
+    }
 }
 
 dependencies {

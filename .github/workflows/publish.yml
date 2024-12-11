@@ -1,0 +1,24 @@
+name: Publish Library
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 23
+          distribution: 'temurin'
+
+      - name: Build and publish
+        run: |
+          ./gradlew clean build publish
