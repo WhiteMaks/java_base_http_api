@@ -1,5 +1,7 @@
 package base.http.api;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 
 public final class RestResponse {
@@ -16,6 +18,10 @@ public final class RestResponse {
 
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
+	}
+
+	public <T> T getBodyByClass(Class<T> responseClass) {
+		return new Gson().fromJson(body, responseClass);
 	}
 
 	public String getBody() {
