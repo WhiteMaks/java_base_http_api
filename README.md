@@ -2,7 +2,7 @@
 
 ## _Setup gradle project_
 
-Add dependency to gradle.build
+Add dependency to build.gradle
 
 ```gradle
 repositories {
